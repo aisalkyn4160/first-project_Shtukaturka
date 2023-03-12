@@ -1,0 +1,342 @@
+@import "fonts/stylesheet.css";
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header {
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile-header{
+  display: none;
+}
+.header__title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header__title span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  padding-top: 8%;
+}
+.header__contact {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header__contact p {
+  width: 50%;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 0px 10px 65px;
+  border-bottom: 1px solid #acacac;
+  position: relative;
+}
+.header__contact p::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/css_sprites.png) -20px -20px no-repeat;
+  position: absolute;
+  top: 2px;
+  left: 20px;
+}
+.header__contact p:nth-child(2)::before {
+  background-position: 50px 0px;
+}
+.header__contact p:nth-child(3) {
+  border-bottom: none;
+}
+.header__contact p:nth-child(3)::before {
+  background-position: -86px -14px;
+}
+.header__button {
+  display: inline-block;
+  width: 45%;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ffcc39;
+  padding: 8px 30px;
+  border-radius: 25px;
+}
+.header__button:hover {
+  background: linear-gradient(180deg, #ffe496 0%, #ffbd00 100%);
+}
+.main {
+  background: url(../img/pic-1.jpg) 50% 0/cover no-repeat;
+  height: 100%;
+  position: relative;
+}
+.main__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  height: 35%;
+  border: 2px solid #ffcc39;
+  margin: auto;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.main__text p{
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+.footer {
+  padding: 20px 0 10px;
+  background: #f0f0f0;
+  color: #4c5768;
+}
+.footer-wrap {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .header__title {
+  width: 33%;
+  color: #4c5768;
+  font-size: 20px;
+}
+.experience {
+  width: 20%;
+  line-height: 20px;
+}
+.experience p {
+  padding-left: 50px;
+  position: relative;
+}
+.experience b {
+  display: block;
+}
+.experience p:before {
+  content: "";
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  background: url("../img/footerStar 2.png") 0px 0px no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer .header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .header-contact b {
+  padding-left: 25px;
+  position: relative;
+  line-height: 25px;
+}
+.footer .header-contact b:before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url("../img/footer-tel.png") 0px 0px no-repeat;
+  position: absolute;
+  top: -1px;
+  left: -5px;
+}
+.footer .header__button {
+  width: auto;
+  margin-bottom: 10px;
+}
+.confidence {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #4c5768;
+}
+.confidence:hover{
+ text-decoration: underline;
+}
+
+@media (max-width: 850px), (max-height: 1024) {
+ .header{
+    display: none;
+  }
+  .mobile-header{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+  }
+  .head-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #252525;
+    padding: 10px 15px;
+    height: 66px;
+  }
+  .header-caption{
+    width: 50%;
+  }
+  .header-caption h1{
+    font-size: 11px;
+    line-height: 13px;
+    padding-left: 60px;
+    margin-left: -12px;
+    position: relative;
+    color: #ACACAC;
+  }
+  .header-caption h1:before{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 60px;
+    background: url("../img/photo_2020-08-13_17-15-21 1.png") 50% 50%/cover no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  .header-caption span{
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .phone-btn{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(../img/headerphone.png) 50% 50%/100% no-repeat;
+  }
+  #menu{
+    display: none;
+  }
+
+  .header-buttons label{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background: #fff url("../img/menu.png") 50% 50%/60% no-repeat;
+  }
+  .main-nav{
+    max-height: 0;
+    width: 100%;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    z-index: 20;
+    overflow: hidden;
+    transition: max-height 1s;
+    box-shadow: 0 9px 13px rgba(0,0,0,.2);
+  }
+  .main-list li{
+    background: #fff;
+    padding: 21px;
+  }
+  .main-list a{
+    color: #000;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  #menu:checked ~ .main-nav{
+    max-height: 300px;
+  }
+  .main{
+    min-height: 200px
+  }
+  .main__text p{
+    font-size: 16px;
+  }
+  .main__text {
+  padding: 10px;
+  width: 85%;
+  height: 22%;
+  border: 2px solid #ffcc39;
+  background-color: rgba(0,0,0,0.5);
+  top: 16%;
+  transform: translateY(-50%);
+}
+
+.footer{
+  display: none;
+  padding: 20px 0 20px;
+}
+.footer-wrap{
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.footer .header__title{
+  width: 100%;
+}
+.footer .header__title h1{
+  display: none;
+}
+.footer .header__title span{
+ border: none;
+ text-transform: uppercase;
+ font-weight: bold;
+ padding: 0;
+ font-size: 14px;
+}
+.experience{
+  width: 100%;
+}
+.experience p{
+  padding-left: 0;
+}
+.experience b{
+  display: inline;
+  padding-left: 0;
+}
+.footer .header-contact b{
+  padding-left: 0;
+}
+.footer .header-contact b:before,
+.experience p:before{
+  display: none;
+}
+.footer-wrap .header__button{
+  margin-bottom: 5px;
+  padding: 8px 25px;
+}
+}
+@media (max-height: 320px){
+  .main__text{
+    top: 35%;
+  }
+}
